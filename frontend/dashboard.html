@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Kitnets Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+<nav class="bg-[#789EAB] text-white px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-xl font-bold">Kitnets Oficial </h1>
+
+    <div class="flex items-center gap-4">
+        <span id="userInfo" class="text-sm font-medium"></span>
+        <button id="logoutBtn"
+                class="bg-white text-blue-700 px-3 py-1 rounded-lg text-sm font-semibold hover:bg-gray-200 transition">
+            Logout
+        </button>
+    </div>
+</nav>
+
+<main class="p-8">
+
+    <div id="userArea" class="hidden space-y-8">
+
+    <h2 class="text-3xl font-bold">Agendar Visita</h2>
+
+    <!-- Schedule Form -->
+    <div class="bg-white p-6 rounded-xl shadow max-w-xl">
+        <form id="scheduleForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium mb-1">Data da Visita</label>
+                <input type="date" id="scheduleDate" required
+                    class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-1">Horário</label>
+                <input type="time" id="scheduleTime" required
+                    class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-[#789EAB] text-white py-2 rounded-lg hover:bg-[#6f8f9b] transition">
+                Solicitar Visita
+            </button>
+        </form>
+    </div>
+
+    <!-- User Applications -->
+    <div>
+        <h3 class="text-xl font-bold mb-4">Minhas Solicitações</h3>
+        <div id="userApplications" class="grid gap-4"></div>
+    </div>
+
+</div>
+
+    <div id="adminArea" class="hidden space-y-8">
+
+        <h2 class="text-3xl font-bold">Painel Administrativo</h2>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Total</p>
+                <h3 id="statTotal" class="text-2xl font-bold">0</h3>
+            </div>
+
+            <div class="bg-yellow-100 p-6 rounded-xl shadow">
+                <p class="text-yellow-700 text-sm">Pendente</p>
+                <h3 id="statPending" class="text-2xl font-bold">0</h3>
+            </div>
+
+            <div class="bg-green-100 p-6 rounded-xl shadow">
+                <p class="text-green-700 text-sm">Aprovado</p>
+                <h3 id="statApproved" class="text-2xl font-bold">0</h3>
+            </div>
+
+            <div class="bg-red-100 p-6 rounded-xl shadow">
+                <p class="text-red-700 text-sm">Rejeitado</p>
+                <h3 id="statRejected" class="text-2xl font-bold">0</h3>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="bg-white p-6 rounded-xl shadow h-72">
+    <h3 class="text-lg font-bold mb-4">Visão Geral das Taxas de Aprovação</h3>
+    <div class="relative h-48">
+        <canvas id="approvalChart"></canvas>
+    </div>
+</div>
+
+        <!-- Applications -->
+        <div id="applicationsContainer" class="grid gap-6"></div>
+
+    </div>
+
+</main>
+
+<div id="toastContainer" class="fixed top-5 right-5 space-y-3 z-50"></div>
+
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

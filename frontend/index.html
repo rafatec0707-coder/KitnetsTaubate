@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitnets Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-7 py-7 flex justify-between items-center">
+
+    <!-- Logo + Nome -->
+    <div class="flex items-center space-x-3">
+      <img src="../images/logo.png" alt="Logo" class="h-16 w-auto">
+      <h1 class="text-2xl font-bold text-[#789EAB]">Kitnets Oficial</h1>
+    </div>
+
+    <!-- Menu -->
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="#home" class="hover:text-blue-600">Início</a>
+      <a href="#studios" class="hover:text-blue-600">Quartos</a>
+      <a href="#contact" class="hover:text-blue-600">Contato</a>
+
+      <a href="login.html"
+         class="bg-[#789EAB] text-white px-4 py-2 rounded-lg hover:bg-[#6f8f9b] transition">
+        Login
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="h-screen bg-cover bg-center flex items-center justify-center text-center"
+    style="background-image: url('../images/background1.jpeg');">
+
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-white max-w-2xl">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6"> 
+            Kitnets modernas no coração da cidade.
+        </h2>
+
+        <p class="text-lg mb-8">
+            Confortável, seguro e projetado para a vida urbana prática.
+        </p>
+
+        <a href="login.html"
+           class="bg-[#789EAB] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-[#6f8f9b] transition">
+            Inscreva-se agora
+        </a>
+    </div>
+</section>
+
+<!-- ================= STUDIO DETAILS ================= -->
+<section id="studios" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-10">Detalhes da Kitnet</h2>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4">📍 Localização privilegiada</h3>
+                <p>Localizado no centro da cidade, com fácil acesso a transportes públicos, mercados e universidades.</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4">💰 Aluguel acessível</h3>
+                <p>A partir de R$1.050,00 com tudo incluso.</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4">🔐 Seguro e protegido</h3>
+                <p>Vigilância 24 horas por dia, 7 dias por semana e acesso seguro ao edifício.</p>
+            </div>
+
+              <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4">📍 Endereço</h3>
+                <p>Rua do Petrólio,282 ,Chacara do Visconde, Taubaté - SP</p>
+            </div>
+
+              <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-4">📦 Itens</h3>
+                <p>Geladeira, Fogão elétrico de 1 boca, Chuveiro, Mesa com 1 cadeira,Armario de despensa, Guarda-roupa, Cama e colchão de casal, Persianas, Gabinete da pia da cozinha e no banheiro, Box Blindex </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-10">Galeria</h2>
+
+        <div id="gallery-container" class=" grid md:grid-cols-3 gap-6">
+            
+            <img src="../images/Entrada.jpeg"
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+            <img src="../images/Quarto.jpeg"
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+            <img src="../images/Banheiro.jpeg"
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+            <img src="../images/Cima.jpeg"
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+            <img src="../images/Baixo.jpeg""
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+            <img src="../images/Corredor.jpeg"
+                 class="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer">
+
+        </div>
+        <p>*imagens contem decorações e itens ilustrativas</p>
+    </div>
+</section>
+
+<!-- ================= CONTACT / AGENTS ================= -->
+<section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-10">Contato</h2>
+
+        <div class="grid md:grid-cols-1 gap-8">
+
+            <div class="bg-white shadow-lg rounded-xl p-6">
+                <h3 class="text-xl font-semibold mb-2">Oscar Affonso</h3>
+                <p class="text-gray-600">📱 (12) 99131-2229</p>
+                <p class="text-gray-500 mt-2">Ele irá direcionar você para o processo com as imobiliárias</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= CALL TO ACTION ================= -->
+<section class="bg-[#789EAB] py-16 text-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Pronto para Morar?</h2>
+    <p class="mb-8">Inscreva-se hoje e garanta seu apartamento moderno.</p>
+
+    <a href="login.html"
+       class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Iniciar Inscrição
+    </a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>&copy; 2026 Kitnets Oficial. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

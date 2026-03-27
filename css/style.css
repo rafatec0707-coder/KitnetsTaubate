@@ -1,0 +1,81 @@
+/* ================= GLOBAL STYLES ================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+/* Fade-in cards */
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Toast slide-in animation */
+.toast {
+    animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ================================
+   CHART CONTAINER
+================================ */
+
+/* Keeps chart smaller and responsive */
+.chart-wrapper {
+    position: relative;
+    height: 12rem; /* 192px */
+}
+
+
+/* ================================
+   PROFESSIONAL TRANSITIONS
+================================ */
+
+/* Smooth hover effect for cards */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Smooth button transitions */
+button {
+    transition: all 0.3s ease;
+}
+
+
+
